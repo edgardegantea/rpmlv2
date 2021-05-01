@@ -51,7 +51,7 @@ class PlanDeContingencia(models.Model):
     activo = models.CharField(verbose_name='Estado del plan', choices=OPCIONES, max_length=13, default='Desconocido')
 
     def __str__(self):
-        return self.nombre
+        return self.area
 
     class Meta:
         verbose_name='Plan de contingencia'
