@@ -5,3 +5,4 @@ from .models import *
 admin.site.register(Informacion)
 admin.site.register(Temperatura)
 admin.site.register(Area)
+admin.site.register(PlanDeContingencia)

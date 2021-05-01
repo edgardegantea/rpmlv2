@@ -43,3 +43,19 @@ class Area(models.Model):
         verbose_name='Ubicación'
         verbose_name_plural='Datos de la ubicación'
 
+
+class PlanDeContingencia(models.Model):
+    area = models.ForeignKey(Area, verbose_name='área', on_delete=models.DO_NOTHING)
+    nombre = models.CharField(verbose_name='Nombre del plan', max_length=255)
+    OPCIONES = {('Desconocido', 'Desconocido'), ('Iniciado', 'Iniciado'), ('En proceso', 'En proceso'), ('Finalizado', 'Finalizado'), ('En Evaluación', 'En Evaluación')}
+    activo = models.CharField(verbose_name='Estado del plan', choices=OPCIONES, max_length=13, default='Desconocido')
+
+    def __str__(self):
+        return self.nombre
+
+    class Meta:
+        verbose_name='Plan de contingencia'
+        verbose_name_plural='Planes de contingencia'
+
+
+
