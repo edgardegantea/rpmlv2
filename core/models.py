@@ -32,9 +32,14 @@ class Temperatura(models.Model):
 
 
 class Area(models.Model):
+    clave = models.CharField(verbose_name='Clave', max_length=10)
     nombre = models.CharField(verbose_name='Lugar', max_length=200)
+    ubicacion = models.CharField(verbose_name='Ubicación', max_length=255)
+    altitud = models.CharField(verbose_name='Altitud', max_length=20)
     latitud = models.CharField(verbose_name='Latitud', max_length=12)
     longitud = models.CharField(verbose_name='Longitud', max_length=12)
+    OP = {('Sí', 'Sí'), ('No', 'No')}
+    operando = models.CharField(verbose_name='Operando', default='No', choices=OP, max_length=2)
 
     def __str__(self):
         return self.nombre
@@ -58,4 +63,13 @@ class PlanDeContingencia(models.Model):
         verbose_name_plural='Planes de contingencia'
 
 
+class MonitorSequia(models.Model):
+    intensidad = models.CharField(verbose_name='Intensidad de la sequía', max_length=50)
+    descripcion = models.TextField(verbose_name='Descripción', max_length=5000)
 
+    def __str__(self):
+        return self.intensidad
+
+    class Meta:
+        verbose_name='Monitor de sequía'
+        verbose_name_plural='Datos de la sequía'
