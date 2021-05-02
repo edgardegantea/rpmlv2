@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'widget_tweaks',
     'core',         # Aplicación base del proyecto
     'frontend',     # Frontend
     'login',        # Login
