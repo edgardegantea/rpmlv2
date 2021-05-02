@@ -1,403 +1,186 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>Sistema</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-
-    <!-- Favicons -->
-    <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
-    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
-          rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
-
-    <!-- Bot+on flat -->
-    <link href="{% static 'assets/css/botonFlat.css' %}" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
-    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
-
-    <!-- =======================================================
-    * Template Name: Siimple - v4.1.0
-    * Template URL: https://bootstrapmade.com/free-bootstrap-landing-page/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
+<head>clear
+<title>AgroPlus</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="{% static 'js/jquery-1.7.1.min.js' %}"></script>
+<script src="{% static 'js/superfish.js' %}"></script>
+<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'js/tms-0.4.1.js' %}"></script>
+<script src="{% static 'js/slider.js' %}"></script>
+<!--[if lt IE 9]>
+<script src="{% static 'js/html5.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/ie.css' %}">
+<![endif]-->
 </head>
-
 <body>
-
-<!-- ======= Header ======= -->
-<header id="header">
-    <div class="container-fluid">
-
-        <div class="logo">
-            <h1><a href="index.html">Sistema</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-        </div>
-
-        <button type="button" class="nav-toggle"><i class="bx bx-menu"></i></button>
-        <nav class="nav-menu">
+<div class="main-bg">
+  <!-- Header -->
+  <header>
+    <div class="inner">
+      <h1 class="logo"><a href="index.html">AgroPlus - Agriculture company</a></h1>
+      <nav>
+        <ul class="sf-menu">
+          <li class="current"><a href="index.html">home</a></li>
+          <li><a href="products.html">products</a></li>
+          <li> <a href="technology.html">technology</a>
             <ul>
-                <li class="active"><a href="{% url 'login' %}" class="scrollto">Inicio</a></li>
-                <li><a href="#about" class="scrollto">Resultados</a></li>
-                <li><a href="#why-us" class="scrollto">Monitoreo</a></li>
-                <li class="drop-down"><a href="">Drop Down</a>
-                    <ul>
-                        <li><a href="#">Drop Down 1</a></li>
-                        <li class="drop-down"><a href="#">Drop Down 2</a>
-                            <ul>
-                                <li><a href="#">Deep Drop Down 1</a></li>
-                                <li><a href="#">Deep Drop Down 2</a></li>
-                                <li><a href="#">Deep Drop Down 3</a></li>
-                                <li><a href="#">Deep Drop Down 4</a></li>
-                                <li><a href="#">Deep Drop Down 5</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Drop Down 3</a></li>
-                        <li><a href="#">Drop Down 4</a></li>
-                        <li><a href="#">Drop Down 5</a></li>
-                    </ul>
-                </li>
-                <li><a href="#contact" class="scrollto">Contact Us</a></li>
+              <li><a href="#">Maecenas faucibus</a></li>
+              <li><a href="#">Fusce tincidunt</a></li>
+              <li> <a href="#">tempor eros</a>
+                <ul>
+                  <li><a href="#">ut viverra</a></li>
+                  <li><a href="#">hendrerit mauris</a></li>
+                </ul>
+              </li>
+              <li><a href="#">mauris ut du</a></li>
             </ul>
-        </nav><!-- .nav-menu -->
-
+          </li>
+          <li><a href="pricing.html">pricing</a></li>
+          <li><a href="contacts.html">contacts</a></li>
+        </ul>
+      </nav>
+      <div class="clear"></div>
     </div>
-</header><!-- End #header -->
-
-<!-- ======= Hero Section ======= -->
-<section id="hero">
-    <div class="hero-container">
-        <h1>Análisis de de datos ambientales</h1>
-        <h2>Plan de contingencia contra sequías en cultivos de la zona noreste del Estado de Puebla</h2>
-
-        <!--
-        <form action="forms/notify.php" method="post" role="form" class="php-email-form">
-            <div class="row no-gutters">
-                <div class="col-md-6 form-group pr-md-1">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group pl-md-1">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-            </div>
-
-            <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your notification request was sent. Thank you!</div>
-            </div>
-            <div class="text-center">
-                <button type="submit">Notify me!</button>
-            </div>
-        </form>
-        -->
-
-        <div>
-            <a href="{% url 'login' %}" class="btn btn-sm animated-button victoria-four">Ingresar</a>
-        </div>
+    <div class="slider-container">
+      <div class="mp-slider">
+        <ul class="items">
+          <li><img src="images/slide-1.jpg" alt="">
+            <div class="banner mp-ban-1"><span class="row-1">putting our</span><span class="row-2">heart &amp; soul</span><span class="row-3">into the field</span></div>
+          </li>
+          <li><img src="images/slide-2.jpg" alt="">
+            <div class="banner mp-ban-2"><span class="row-1">we have a strong</span><span class="row-2">agriculture</span><span class="row-3">heritage</span></div>
+          </li>
+          <li><img src="images/slide-3.jpg" alt="">
+            <div class="banner mp-ban-3"><span class="row-1">growing clean</span><span class="row-2">and full of health</span><span class="row-3">products</span></div>
+          </li>
+        </ul>
+      </div>
     </div>
-</section><!-- #hero -->
-
-<main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <img src="assets/img/about-img.jpg" class="img-fluid" alt="">
+    <a href="#" class="mp-prev"></a> <a href="#" class="mp-next"></a> </header>
+  <!-- Content -->
+  <section id="content">
+    <div class="container_24">
+      <div class="wrapper">
+        <div class="grid_24 content-bg">
+          <div class="wrapper">
+            <div class="grid_16 suffix_1 prefix_1 alpha">
+              <article class="indent-bot">
+                <h2>Our products:</h2>
+                <div class="wrapper hr-border-1">
+                  <div class="grid_4 alpha"> <img src="images/page1-img1.jpg" class="img-indent-bot" alt="">
+                    <dl class="def-list-1">
+                      <dt> <a href="#">Tomatoes</a> </dt>
+                      <dd> Vivamus hendrerit mauris ut du gravida ut viverra lectus tincidunt. </dd>
+                    </dl>
+                  </div>
+                  <div class="grid_4"> <img src="images/page1-img2.jpg" class="img-indent-bot" alt="">
+                    <dl class="def-list-1">
+                      <dt> <a href="#">Indian Eggplant</a> </dt>
+                      <dd> Vivamus hendrerit mauris ut du gravida ut viverra lectus tincidunt. </dd>
+                    </dl>
+                  </div>
+                  <div class="grid_4"> <img src="images/page1-img3.jpg" class="img-indent-bot" alt="">
+                    <dl class="def-list-1">
+                      <dt> <a href="#">Cabbage</a> </dt>
+                      <dd> Vivamus hendrerit mauris ut du gravida ut viverra lectus tincidunt. </dd>
+                    </dl>
+                  </div>
+                  <div class="grid_4 omega"> <img src="images/page1-img4.jpg" class="img-indent-bot" alt="">
+                    <dl class="def-list-1">
+                      <dt> <a href="#">Potatoes</a> </dt>
+                      <dd> Vivamus hendrerit mauris ut du gravida ut viverra lectus tincidunt. </dd>
+                    </dl>
+                  </div>
                 </div>
-                <div class="col-lg-6 pt-4 pt-lg-0">
-                    <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-                    <p class="fst-italic">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore
-                        magna aliqua.
-                    </p>
-                    <ul>
-                        <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </li>
-                        <li><i class="bx bx-check-double"></i> Duis aute irure dolor in reprehenderit in voluptate
-                            velit.
-                        </li>
-                        <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu
-                            fugiat nulla pariatur.
-                        </li>
-                    </ul>
-                    <p>
-                        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                        in voluptate
-                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum
-                    </p>
+                <div class="alignright"> <a href="#" class="button">Read more</a> </div>
+              </article>
+              <article class="banner-box">
+                <div class="inner">
+                  <h3>Need a useful advice from breeder?</h3>
+                  <h4>we want to raise your crops &amp; livestock!</h4>
+                  <blockquote class="quote indent-right"> <strong>This website template has several pages: Home, Products, Technology, Pricing, Contacts</strong> (note that contact us form - doesn't work) Vivamus hendrerit mauris ut dui. gravida ut viverra lectus tincidunt. Cras mattis tempor eros nec tristique. Sed sed felis arcu, vel vehicula augue. Maecenas faucibus sagittis cursus. Fusce tincidunt, tellus eget tristique cursus, orci mi iaculis sem. </blockquote>
+                  <div class="alignright indent-right"> <span class="author">John Smith <i>(breeder)</i></span> </div>
                 </div>
+                <img src="images/banner-box-img.png" alt="" class="banner-box-img"> </article>
             </div>
-
-        </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us section-bg">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="card">
-                        <img src="assets/img/why-us-1.jpg" class="card-img-top" alt="...">
-                        <div class="card-icon">
-                            <i class="bx bx-book-reader"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="">Our Mission</a></h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="card">
-                        <img src="assets/img/why-us-2.jpg" class="card-img-top" alt="...">
-                        <div class="card-icon">
-                            <i class="bx bx-calendar-edit"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="">Our Plan</a></h5>
-                            <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-                                quasi architecto beatae vitae dicta sunt explicabo. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="card">
-                        <img src="assets/img/why-us-3.jpg" class="card-img-top" alt="...">
-                        <div class="card-icon">
-                            <i class="bx bx-landscape"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="">Our Vision</a></h5>
-                            <p class="card-text">Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed
-                                quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est,
-                                qui dolorem ipsum quia dolor sit amet. </p>
-                        </div>
-                    </div>
-                </div>
+            <div class="grid_5 suffix_1 omega">
+              <article class="indent-bot-1">
+                <h2 class="heading-1">Welcome!</h2>
+                <p class="p1"> <strong> AgroPlus is one of Free website templates created by TemplateMonster.com team. </strong> </p>
+                <p class="hr-border-1"> This website template is optimized for 1280X1024 screen resolution. It is also XHTML &amp; CSS valid. The PSD source files of this AgroPlus template are available for free for the registered members of TemplateMonster.com. Feel free to get them! </p>
+                <div class="alignright"> <a href="#" class="button">Read more</a> </div>
+              </article>
+              <article>
+                <h2>Our programs:</h2>
+                <ul class="list-1">
+                  <li><a href="#">Agronomic Practices</a></li>
+                  <li><a href="#">Biotechnology</a></li>
+                  <li><a href="#">Biotechnology Research</a></li>
+                  <li><a href="#">Benefits of Biotechnology</a></li>
+                  <li><a href="#">The Regulatory Process</a></li>
+                  <li><a href="#">Breeding</a></li>
+                  <li><a href="#">Learning Centers</a></li>
+                </ul>
+              </article>
             </div>
-
+          </div>
         </div>
-    </section><!-- End Why Us Section -->
-
-    <!-- ======= Frequenty Asked Questions Section ======= -->
-    <section class="faq">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Frequenty Asked Questions</h2>
-            </div>
-
-            <ul class="faq-list">
-
-                <li>
-                    <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">Non consectetur a erat nam at
-                        lectus urna duis? <i class="bx bx-down-arrow-alt icon-show"></i><i
-                                class="bx bx-x icon-close"></i></a>
-                    <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                        <p>
-                            Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
-                            curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                        </p>
-                    </div>
-                </li>
-
-                <li>
-                    <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">Feugiat scelerisque varius
-                        morbi enim nunc faucibus a pellentesque? <i class="bx bx-down-arrow-alt icon-show"></i><i
-                                class="bx bx-x icon-close"></i></a>
-                    <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                        <p>
-                            Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit
-                            laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium.
-                            Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa
-                            tincidunt dui.
-                        </p>
-                    </div>
-                </li>
-
-                <li>
-                    <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">Dolor sit amet consectetur
-                        adipiscing elit pellentesque habitant morbi? <i class="bx bx-down-arrow-alt icon-show"></i><i
-                                class="bx bx-x icon-close"></i></a>
-                    <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                        <p>
-                            Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar
-                            elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
-                            pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at
-                            elementum eu facilisis sed odio morbi quis
-                        </p>
-                    </div>
-                </li>
-
-                <li>
-                    <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">Ac odio tempor orci dapibus.
-                        Aliquam eleifend mi in nulla? <i class="bx bx-down-arrow-alt icon-show"></i><i
-                                class="bx bx-x icon-close"></i></a>
-                    <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                        <p>
-                            Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit
-                            laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium.
-                            Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa
-                            tincidunt dui.
-                        </p>
-                    </div>
-                </li>
-
-                <li>
-                    <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">Tempus quam pellentesque nec
-                        nam aliquam sem et tortor consequat? <i class="bx bx-down-arrow-alt icon-show"></i><i
-                                class="bx bx-x icon-close"></i></a>
-                    <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-                        <p>
-                            Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est
-                            ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing
-                            bibendum est. Purus gravida quis blandit turpis cursus in
-                        </p>
-                    </div>
-                </li>
-
-                <li>
-                    <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed">Tortor vitae purus faucibus
-                        ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i
-                                class="bx bx-down-arrow-alt icon-show"></i><i class="bx bx-x icon-close"></i></a>
-                    <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-                        <p>
-                            Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer
-                            malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem
-                            dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat
-                            commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non
-                            blandit massa enim nec.
-                        </p>
-                    </div>
-                </li>
-
-            </ul>
-
-        </div>
-    </section><!-- End Frequenty Asked Questions Section -->
-
-    <!-- ======= Contact Us Section ======= -->
-    <section id="contact" class="contact section-bg">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Contact Us</h2>
-            </div>
-
-            <div class="row justify-content-center">
-
-                <div class="col-lg-3 col-md-5 mb-5 mb-md-0">
-                    <div class="info">
-                        <div class="address">
-                            <i class="bx bx-map"></i>
-                            <p>A108 Adam Street<br>New York, NY 535022</p>
-                        </div>
-
-                        <div class="email">
-                            <i class="bx bx-envelope"></i>
-                            <p>info@example.com</p>
-                        </div>
-
-                        <div class="phone">
-                            <i class="bx bx-phone-call"></i>
-                            <p>+1 5589 55488 55s</p>
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-5 col-md-7">
-                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
-                                   required>
-                        </div>
-                        <div class="form-group mt-3">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
-                                   required>
-                        </div>
-                        <div class="form-group mt-3">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-                                   required>
-                        </div>
-                        <div class="form-group mt-3">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Message"
-                                      required></textarea>
-                        </div>
-                        <div class="my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit">Send Message</button>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-
-        </div>
-    </section><!-- End Contact Us Section -->
-
-</main><!-- End #main -->
-
-<!-- ======= Footer ======= -->
-<footer id="footer">
-    <div class="container">
-        <div class="copyright">
-            &copy; Copyright <strong><span>Siimple</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-landing-page/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+      </div>
     </div>
-</footer><!-- End #footer -->
-
-<!-- Vendor JS Files -->
-<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
-
-<!-- Template Main JS File -->
-<script src="{% static 'assets/js/main.js' %}"></script>
-
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="container_24">
+      <div class="wrapper">
+        <div class="grid_24 footer-bg">
+          <div class="hr-border-2"></div>
+          <div class="wrapper">
+            <div class="grid_7 suffix_1 prefix_1 alpha">
+              <div class="copyright"> &copy; 2012 <strong class="footer-logo">AgroPlus</strong>
+                <div>Website Template by <a target="_blank" href="http://www.templatemonster.com/">Templatemonster.com</a></div>
+              </div>
+            </div>
+            <div class="grid_4">
+              <h5 class="heading-1">Archives:</h5>
+              <ul class="footer-list">
+                <li><a href="#">October 2012</a></li>
+                <li><a href="#">September 2012</a></li>
+                <li><a href="#">August 2012</a></li>
+                <li><a href="#">July 2012</a></li>
+              </ul>
+            </div>
+            <div class="grid_4">
+              <h5 class="heading-1">Links:</h5>
+              <ul class="footer-list">
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Plugins</a></li>
+                <li><a href="#">Suggest Ideas</a></li>
+                <li><a href="#">Support Forum</a></li>
+              </ul>
+            </div>
+            <div class="grid_4">
+              <h5 class="heading-1">Support:</h5>
+              <ul class="footer-list">
+                <li><a href="#">Special Proposition</a></li>
+                <li><a href="#">Free Phone</a></li>
+                <li><a href="#">Solutions</a></li>
+              </ul>
+            </div>
+            <div class="grid_2 suffix_1 omega">
+              <ul class="social-list">
+                <li><a href="#"><img src="images/social-icon-1.png" alt=""></a></li>
+                <li><a href="#"><img src="images/social-icon-2.png" alt=""></a></li>
+                <li><a href="#"><img src="images/social-icon-3.png" alt=""></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
 </body>
-
 </html>
