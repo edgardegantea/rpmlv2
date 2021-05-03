@@ -12,23 +12,25 @@ class Informacion(models.Model):
         return self.nombreContro
 
     class Meta:
-        verbose_name='Información'
-        verbose_name_plural='Datos de la aplicación'
+        verbose_name = 'Información'
+        verbose_name_plural = 'Datos de la aplicación'
 
 
 # Temperaturas
 class Temperatura(models.Model):
     temperaturaMinima = models.DecimalField(verbose_name='Temperatura mínima', max_digits=2, decimal_places=2,
                                             default=0.00)
-    temperaturaMaxima = models.DecimalField(verbose_name='Temperatura máxima', max_digits=2, decimal_places=2, default=0.00)
-    temperaturaLeida = models.DecimalField(verbose_name='Temperatura leída', max_digits=2, decimal_places=2, default=0.00)
+    temperaturaMaxima = models.DecimalField(verbose_name='Temperatura máxima', max_digits=2, decimal_places=2,
+                                            default=0.00)
+    temperaturaLeida = models.DecimalField(verbose_name='Temperatura leída', max_digits=2, decimal_places=2,
+                                           default=0.00)
 
     def __str__(self):
         return self.temperaturaLeida
 
     class Meta:
-        verbose_name='Temperatuta'
-        verbose_name_plural='Temperaturas'
+        verbose_name = 'Temperatuta'
+        verbose_name_plural = 'Temperaturas'
 
 
 class Area(models.Model):
@@ -45,22 +47,23 @@ class Area(models.Model):
         return self.nombre
 
     class Meta:
-        verbose_name='Ubicación'
-        verbose_name_plural='Datos de la ubicación'
+        verbose_name = 'Ubicación'
+        verbose_name_plural = 'Datos de la ubicación'
 
 
 class PlanDeContingencia(models.Model):
     area = models.ForeignKey(Area, verbose_name='área', on_delete=models.DO_NOTHING)
     nombre = models.CharField(verbose_name='Nombre del plan', max_length=255)
-    OPCIONES = {('Desconocido', 'Desconocido'), ('Iniciado', 'Iniciado'), ('En proceso', 'En proceso'), ('Finalizado', 'Finalizado'), ('En Evaluación', 'En Evaluación')}
+    OPCIONES = {('Desconocido', 'Desconocido'), ('Iniciado', 'Iniciado'), ('En proceso', 'En proceso'),
+                ('Finalizado', 'Finalizado'), ('En Evaluación', 'En Evaluación')}
     activo = models.CharField(verbose_name='Estado del plan', choices=OPCIONES, max_length=13, default='Desconocido')
 
     def __str__(self):
         return self.nombre
 
     class Meta:
-        verbose_name='Plan de contingencia'
-        verbose_name_plural='Planes de contingencia'
+        verbose_name = 'Plan de contingencia'
+        verbose_name_plural = 'Planes de contingencia'
 
 
 class MonitorSequia(models.Model):
@@ -71,5 +74,23 @@ class MonitorSequia(models.Model):
         return self.intensidad
 
     class Meta:
-        verbose_name='Monitor de sequía'
-        verbose_name_plural='Datos de la sequía'
+        verbose_name = 'Monitor de sequía'
+        verbose_name_plural = 'Datos de la sequía'
+
+
+class Analisis(models.Model):
+    titulo = models.CharField(verbose_name='Nombre del análisis', max_length=255)
+    periodo = models.CharField(verbose_name='Periodo', max_length=100)
+    fechaInicio = models.DateField(verbose_name='Fecha de inicio')
+    fechaFin = models.DateField(verbose_name='Fecha de fin')
+    fechaPaso = models.DateField(verbose_name='Fecha de paso')
+    archivo = models.FileField(verbose_name='Archivo')
+    tipoAnalisis = models.CharField(verbose_name='Tipo de análisis', max_length=100)
+    comentario = models.CharField(verbose_name='Comentario', null=True, max_length=255)
+
+    def __str__(self):
+        return self.titulo
+
+    class Meta:
+        verbose_name = 'Análisis'
+        verbose_name_plural = 'Análisis'
