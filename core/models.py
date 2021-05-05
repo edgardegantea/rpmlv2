@@ -101,7 +101,11 @@ class Cultivos(models.Model):
     nombreCientifico = models.CharField(verbose_name='Nombre científico', max_length=100)
     descripcion = models.TextField(verbose_name='Descripcion', max_length=5000)
     imagenes = models.ImageField(verbose_name='Foto', upload_to='imgcultivos')
-    MESES = {('Enero', 'Enero'), ('Febrero', 'Febrero')}
+    MESES = {
+        ('Enero', 'Enero'), ('Febrero', 'Febrero'), ('Marzo', 'Marzo'), ('Abril', 'Abril'), ('Mayo', 'Mayo'),
+        ('Junio', 'Junio'), ('Julio', 'Julio'), ('Agosto', 'Agosto'), ('Septiembre', 'Septiembre'),
+        ('Octubre', 'Octubre'), ('Noviembre', 'Noviembre'), ('Diciembre', 'Diciembre')
+    }
     mesDeSiembra = models.CharField(verbose_name='Mes de siembra', choices=MESES, max_length=30, default='Enero')
 
     def __str__(self):
@@ -115,16 +119,17 @@ class Cultivos(models.Model):
 class CensoTemperatura(models.Model):
     Area = models.ForeignKey(Area, on_delete=models.DO_NOTHING, verbose_name='Area')
     Cultivo = models.ForeignKey(Cultivos, on_delete=models.DO_NOTHING, verbose_name='Cultivo')
-    temperatura1 = models.DecimalField(verbose_name='Temperatura del suelo', max_digits=5, decimal_places=1, default=26.0, max_length=6)
-    temperatura2 = models.DecimalField(verbose_name='Temperatura ambiental', max_digits=5, decimal_places=1, default=27.0,
-                                      max_length=6)
-    fecha = models.DateField(verbose_name='Fecha')
-    hora = models.TimeField(verbose_name='Hora')
+    temperatura1 = models.DecimalField(verbose_name='Temperatura del suelo', max_digits=5, decimal_places=1,
+                                       default=26.0, max_length=6)
+    temperatura2 = models.DecimalField(verbose_name='Temperatura ambiental', max_digits=5, decimal_places=1,
+                                       default=27.0,
+                                       max_length=6)
+    fecha = models.DateField(verbose_name='Fecha', auto_now_add=True)
+    hora = models.TimeField(verbose_name='Hora', auto_now_add=True)
 
     def __str__(self):
-        return "{0} °C".format(self.temperatura)
+        return str(self.temperatura1)
 
     class Meta:
         verbose_name = 'Temperatura'
         verbose_name_plural = 'Temperatura'
-

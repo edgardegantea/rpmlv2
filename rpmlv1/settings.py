@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'core',         # Aplicación base del proyecto
     'frontend',     # Frontend
+    'pruebas',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

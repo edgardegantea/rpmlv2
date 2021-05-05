@@ -75,6 +75,7 @@ class CensoTemperaturaAdmin(admin.ModelAdmin):
     list_display = ('Area', 'Cultivo', 'temperatura1', 'temperatura2', 'fecha', 'hora')
     ordering = ('Area', 'Cultivo', 'temperatura1', 'temperatura2', 'fecha', 'hora')
     search_fields = ['Area', 'Cultivo', 'temperatura1', 'temperatura2', 'fecha', 'hora']
+    list_filter = ('Area', 'Cultivo')
     list_per_page = 10
     empty_value_display = '-empty-'
 
