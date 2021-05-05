@@ -110,3 +110,21 @@ class Cultivos(models.Model):
     class Meta:
         verbose_name = 'Cultivo'
         verbose_name_plural = 'Cultivos'
+
+
+class CensoTemperatura(models.Model):
+    Area = models.ForeignKey(Area, on_delete=models.DO_NOTHING, verbose_name='Area')
+    Cultivo = models.ForeignKey(Cultivos, on_delete=models.DO_NOTHING, verbose_name='Cultivo')
+    temperatura1 = models.DecimalField(verbose_name='Temperatura del suelo', max_digits=5, decimal_places=1, default=26.0, max_length=6)
+    temperatura2 = models.DecimalField(verbose_name='Temperatura ambiental', max_digits=5, decimal_places=1, default=27.0,
+                                      max_length=6)
+    fecha = models.DateField(verbose_name='Fecha')
+    hora = models.TimeField(verbose_name='Hora')
+
+    def __str__(self):
+        return "{0} °C".format(self.temperatura)
+
+    class Meta:
+        verbose_name = 'Temperatura'
+        verbose_name_plural = 'Temperatura'
+
