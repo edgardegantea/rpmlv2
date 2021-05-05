@@ -91,21 +91,29 @@
     <!-- ======= About Section ======= -->
     <section id="about">
         <div class="container" data-aos="fade-up">
-            <div class="row about-container">
+            <div class="about-container text-justify">
 
-                <div class="col-lg-6 content order-lg-1 order-2">
-                    <h2 class="title">Acerca de este proyecto</h2>
+                <div class="col-lg-12 text-center content order-lg-1 order-2">
+                    <h1 class="title">Cultivos predominantes de la zona de estudio</h1>
                     <p>
-                        Este proyecto está orientado para ofrecer información relevante a productores agrícolas cuya
-                        base de sustento económico depende de manera directa con su producción temporal y/o anual.
+                        Los siguientes ciultivos representan el 70% del sustento económico y alimentario de los
+                        habitantes de la zona.
                     </p>
 
-
                 </div>
 
-                <div class="col-lg-6 order-lg-2 order-1" data-aos="fade-left" data-aos-delay="100">
-                    <img src="{% static 'img/01.jpg' %}" alt="">
-                </div>
+
+                    {% for cultivo in listCultivos %}
+                        <div class="card mt-5">
+                            <img style="height: 200px; object-fit: cover" src="{{ cultivo.imagenes.url }}" class="card-img-top" alt="{{ cultivo.nombre }}">
+                            <div class="card-body">
+                                <h5 class="title">{{ cultivo.nombre }} (<b>{{ cultivo.nombreCientifico }}</b>)</h5>
+                                <p class="card-text">{{ cultivo.descripcion }}</p>
+                                <p class="card-text"><small class="text-muted">Ver más</small></p>
+                            </div>
+                        </div>
+                    {% endfor %}
+
             </div>
 
         </div>
@@ -161,6 +169,14 @@
                 <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                     accusantium doloremque</p>
             </div>
+
+            {% for area in listAreas %}
+                <p class="">{{ area.nombre }} (<b>{{ area.latitud }}, {{ area.longitud }}</b>)</p>
+            {% endfor %}
+
+
+
+
             <div class="row">
                 <div class="col-lg-4 col-md-6" data-aos="zoom-in">
                     <div class="box">

@@ -94,3 +94,19 @@ class Analisis(models.Model):
     class Meta:
         verbose_name = 'Análisis'
         verbose_name_plural = 'Análisis'
+
+
+class Cultivos(models.Model):
+    nombre = models.CharField(verbose_name='Cultivo', max_length=150)
+    nombreCientifico = models.CharField(verbose_name='Nombre científico', max_length=100)
+    descripcion = models.TextField(verbose_name='Descripcion', max_length=5000)
+    imagenes = models.ImageField(verbose_name='Foto', upload_to='imgcultivos')
+    MESES = {('Enero', 'Enero'), ('Febrero', 'Febrero')}
+    mesDeSiembra = models.CharField(verbose_name='Mes de siembra', choices=MESES, max_length=30, default='Enero')
+
+    def __str__(self):
+        return self.nombre
+
+    class Meta:
+        verbose_name = 'Cultivo'
+        verbose_name_plural = 'Cultivos'

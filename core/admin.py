@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.utils.html import format_html
+
 from .models import *
 
 
@@ -53,3 +55,16 @@ class MonitorSequiaAdmin(admin.ModelAdmin):
     search_fields = ['intensidad', 'descripcion']
     list_per_page = 10
     empty_value_display = '-empty-'
+
+
+@admin.register(Cultivos)
+class CultivosAdmin(admin.ModelAdmin):
+    list_filter = ('nombre', 'nombreCientifico', 'descripcion', 'mesDeSiembra')
+    list_display = ('imagenes', 'nombre', 'nombreCientifico', 'descripcion', 'mesDeSiembra')
+    list_per_page = 3
+    ordering = ('nombre',)
+    search_fields = ['nombre', 'nombreCientifico', 'descripcion', 'mesDeSiembra']
+
+    def imagenes(self, obj):
+        # return format_html('<img src={} />', obj.imagenes.url)
+        return format_html('<img src={} />', obj.imagenes.url)
